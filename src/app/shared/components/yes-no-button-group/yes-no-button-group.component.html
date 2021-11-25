@@ -1,6 +1,7 @@
 <div role="radiogroup" [attr.aria-labelledby]="id" class="button-group">
   <label [attr.id]="id" class="label">{{ label }}</label>
   <button
+    appKeyboardManager
     role="radio"
     [attr.aria-checked]="value === options.YES"
     [attr.tabindex]="value === options.YES || value === null ? 0 : -1"
