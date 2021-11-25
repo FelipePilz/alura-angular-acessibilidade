@@ -1,7 +1,12 @@
-<div role="radiogroup" [attr.aria-labelledby]="id" class="button-group">
+<div
+  appKeyboardManager
+  role="radiogroup"
+  [attr.aria-labelledby]="id"
+  class="button-group"
+>
   <label [attr.id]="id" class="label">{{ label }}</label>
   <button
-    appKeyboardManager
+    appKeyboardManagedItem
     role="radio"
     [attr.aria-checked]="value === options.YES"
     [attr.tabindex]="value === options.YES || value === null ? 0 : -1"
@@ -13,6 +18,7 @@
     Yes
   </button>
   <button
+    appKeyboardManagedItem
     role="radio"
     [attr.aria-checked]="value === options.NO"
     [attr.tabindex]="value === options.NO || value === null ? 0 : -1"
